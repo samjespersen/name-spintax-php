@@ -16,6 +16,7 @@ $(document).ready(function () {
             url: `server.php?first_name=${fname}&last_name=${lname}`,
             dataType: 'json',
             success: function (nameArray) {
+                console.log(`${nameArray[0]} ${toTitleCase(nameArray[1])}`);
                 $("#name").text(`${nameArray[0]} ${toTitleCase(nameArray[1])}`);
             },
             error: function (xhr, status, error) {
@@ -24,8 +25,8 @@ $(document).ready(function () {
         });
     };
 
-    const f = Math.floor(Math.random() * 109173) + 1
-    const l = Math.floor(Math.random() * 162253) + 1
+    const f = Math.floor(Math.random() * 30000) + 1
+    const l = Math.floor(Math.random() * 30000) + 1
 
     getNames(f, l);
 
