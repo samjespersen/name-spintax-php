@@ -1,6 +1,6 @@
 <?php
 
-require 'utils/connect.php';
+require '../utils/connect.php';
 $output = [];
 
 $method = $_SERVER["REQUEST_METHOD"];
@@ -22,7 +22,7 @@ if ($method === "GET") {
         $last_name = mysqli_fetch_assoc($last_name);
         $output[] = $last_name["name"];
     }
-    
+
     $json_response = json_encode($output);
     echo $json_response;
 }
