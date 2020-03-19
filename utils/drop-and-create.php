@@ -2,7 +2,6 @@
 
 require('./connect.php');
 
-
 $dropTables = "DROP TABLE IF EXISTS first_names,last_names";
 $createFirstNameTables = "CREATE TABLE first_names(id SERIAL PRIMARY KEY, name VARCHAR(64))";
 $createLastNameTables = "CREATE TABLE last_names(id SERIAL PRIMARY KEY, name VARCHAR(64))";

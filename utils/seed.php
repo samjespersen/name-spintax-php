@@ -12,18 +12,26 @@ $last_names = explode("\n", fread($last_names_text, filesize($last_names_file)))
 $fNameCount = 0;
 $lNameCount = 0;
 
-foreach ($first_names as $name) {
-    $sql = "INSERT INTO first_names (name) VALUES " . '("' . $name . '")';
-    $db_connect->query($sql) or die("you dun goofed $sql");
-    $fNameCount++;
+foreach ($first_names as $key => $name) {
+    if ($key < 30000) {
 
-    echo $fNameCount . "/~100000 first names loaded<br>";
+        $sql = "INSERT INTO first_names (name) VALUES " . '("' . $name . '")';
+        $db_connect->query($sql) or die("you dun goofed $sql");
+        $fNameCount++;
+        echo $fNameCount . "/30000 first names loaded<br>";
+    } else {
+        break;
+    }
 }
 
-foreach ($last_names as $name) {
-    $sql = "INSERT INTO last_names (name) VALUES " . '("' . $name . '")';
-    $db_connect->query($sql) or die("you dun goofed $sql");
-    $lNameCount++;
+foreach ($last_names as $key => $name) {
+    if ($key < 30000) {
 
-    echo $lNameCount . "/~160000 last names loaded<br>";
+        $sql = "INSERT INTO last_names (name) VALUES " . '("' . $name . '")';
+        $db_connect->query($sql) or die("you dun goofed $sql");
+        $lNameCount++;
+        echo $lNameCount . "/30000 last names loaded<br>";
+    } else {
+        break;
+    }
 }
