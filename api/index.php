@@ -17,8 +17,8 @@ if ($method === "GET") {
         $output[] = name_query("last_names", $id);
     }
 
-    header('Access-Control-Allow-Origin: *');
-    header('Content-Type: application/json');
+    // header('Access-Control-Allow-Origin: *');
+    // header('Content-Type: application/json');
 
     $json_response = json_encode($output);
     echo $json_response;
