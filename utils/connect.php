@@ -6,14 +6,22 @@ $DBURL = "mysql://qpj6lswa560ip0p7:umffjci4sv5nokll@dno6xji1n8fm828n.cbetxkdyhws
 $connectionString = explode("mysql://", $DBURL);
 $connectionString = explode(":", $connectionString[1]);
 
-$user = $connectionString[0];
-$pass = explode("@", $connectionString[1])[0];
-$db_url = explode("@", $connectionString[1])[1];
-$dbname = explode("/", $connectionString[2])[1];
+// $user = $connectionString[0];
+// $pass = explode("@", $connectionString[1])[0];
+// $db_url = explode("@", $connectionString[1])[1];
+// $dbname = explode("/", $connectionString[2])[1];
 
-// $user = 'root';
-// $pass = '';
-// $db_url = 'localhost';
-// $dbname = 'test';
+$user = 'root';
+$pass = '';
+$db_url = 'localhost';
+$dbname = 'test';
 
-$db_connect = new mysqli($db_url, $user, $pass, $dbname);
+//DSN for PDO
+
+$dsn = 'mysql:host=' . $db_url . ';dbname=' . $dbname;
+
+//Create PDO
+
+$db_connect = new PDO($dsn, $user, $pass);
+
+// $db_connect = new mysqli($db_url, $user, $pass, $dbname);
