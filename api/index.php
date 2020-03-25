@@ -1,4 +1,5 @@
 <?php
+header("Access-Control-Allow-Origin: *");
 
 require '../utils/connect.php';
 require './search_functions.php';
