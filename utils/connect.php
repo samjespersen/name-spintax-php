@@ -1,6 +1,5 @@
 <?php
 
-// $DBURL = "mysql://qpj6lswa560ip0p7:umffjci4sv5nokll@dno6xji1n8fm828n.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/ckm924vaihak7dac";
 $DBURL = getenv('JAWSDB_URL');
 
 $connectionString = explode("mysql://", $DBURL);
