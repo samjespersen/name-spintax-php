@@ -21,3 +21,6 @@ $db_connect = new PDO($dsn, $user, $pass);
 
 //mysqli
 // $db_connect = new mysqli($db_url, $user, $pass, $dbname);
+// $stmt = $db_connect->prepare("SELECT * FROM table WHERE id = ?");
+// $stmt->bind_param('i', $id);
+// $stmt->execute();
