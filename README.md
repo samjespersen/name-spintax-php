@@ -1,6 +1,8 @@
 # Random Name Generator
 ## http://boiling-sea-95267.herokuapp.com/api/
 
+*All data was sourced from census.gov*
+
 ### Endpoints:
 * first_name
 * last_name
