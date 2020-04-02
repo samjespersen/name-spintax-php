@@ -35,3 +35,5 @@ Strings are read as SQL **LIKE** queries, which means you have access to the fol
 - _ (a single character)
 
 If more than one result is returned, the API will return a random one from amongst them. For example, if both first_name and last_name are equal to %, the API will return a completely random name.
+
+For more on how to write SQL LIKE queries, see [here](https://www.w3schools.com/sql/sql_like.asp).
