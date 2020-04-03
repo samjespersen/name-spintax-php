@@ -1,5 +1,4 @@
 <?php
-
 require '../utils/connect.php';
 require './search_functions.php';
 
@@ -17,6 +16,9 @@ if ($method === "GET") {
         $id = $_GET["last_name"];
         $output[] = name_query("last_names", $id);
     }
+
+    header('Access-Control-Allow-Origin: *');
+    header('Content-Type: application/json');
 
     $json_response = json_encode($output);
     echo $json_response;
