@@ -1,4 +1,4 @@
-// <?php
+<?php
 
     function name_query($name_order, $name)
     {
